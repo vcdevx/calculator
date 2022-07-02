@@ -1,26 +1,3 @@
-//Functions for all conductors / equations 
-
-/*function add(num1, num2) {
-    return num1 + num2;
-}
-
-function subtract(num1, num2) {
-    return num1 - num2;
-}
-
-function multiply(num1, num2) {
-    return num1 * num2;
-}
-
-function divide(num1, num2) {
-    if (num2 === 0) {
-        let error = new Error('Stop it. You can\'t divide by zero!');
-        throw error;
-    } else {
-        return num1 / num2;
-    }
-}*/
-
 function operate(operator, num1, num2) {
     if (operator === '+') {
         return num1 + num2;
@@ -50,9 +27,6 @@ function updateDisplay() {
 updateDisplay();
 
 //Calculator button functionality
-let num1 = "";
-let num2 = "";
-let operator = "";
 
 const numberBtn = document.querySelectorAll(".number")
 const operatorBtn = document.querySelectorAll(".operator");
@@ -115,7 +89,7 @@ function handleOperator(nextOperator) {
         calculator.operator = nextOperator;
         return;
     }
-    
+
     if (num1 == null && !isNaN(inputValue)) {
         calculator.num1 = inputValue;
     } else if (operator) {
